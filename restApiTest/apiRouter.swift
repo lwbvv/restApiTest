@@ -57,15 +57,15 @@ enum ApiRouter: URLRequestConvertible {
     private var path: String {
         switch self {
         case .showNews:
-            return "/v1/app/news"
+            return "/v1/app/news" //나중에 바꾸자
         }
     }
     
     //MARK: - Parameterse
     var parameters: Parameters? {
         switch self {
-        case .getNews(language: let language):
-            return [Constants.Parameters.language: language]
+        case .showNews(let password):
+            return [Constants.Parameters.language: password]
         default:
             return nil
         }
