@@ -3,7 +3,7 @@ import Alamofire
 enum ApiRouter: URLRequestConvertible {
     
     // MARK: - Common
-    case getNews(language: String)
+    case showNews(language: String)
     
     //MARK: - URLRequestConvertible
     func asURLRequest() throws -> URLRequest {
@@ -45,6 +45,8 @@ enum ApiRouter: URLRequestConvertible {
     //MARK: - HttpMethod
     private var method: HTTPMethod {
         switch self {
+        case .showNews:
+            return .get
         default:
             return .get
         }
@@ -54,8 +56,8 @@ enum ApiRouter: URLRequestConvertible {
     //The path is the part following the base url
     private var path: String {
         switch self {
-        case .getNews:
-            return Api.news
+        case .showNews:
+            return "/v1/app/news"
         }
     }
     
