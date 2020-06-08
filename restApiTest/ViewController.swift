@@ -8,6 +8,7 @@
 
 import UIKit
 import Network
+import Alamofire
 
 struct CheckDevice : Codable {
     var code: String
@@ -24,7 +25,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var resUserNo: UILabel!
     @IBOutlet weak var phoneNumber: UILabel!
-    
     
     @IBOutlet weak var deviceID: UITextField! {
         didSet {
@@ -83,44 +83,53 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        handler = { result in
-            do {
-                let dataJson = try JSONSerialization.data(withJSONObject: result, options: .prettyPrinted)
+//        handler = { result in
+//            do {
+//                let dataJson = try JSONSerialization.data(withJSONObject: result, options: .prettyPrinted)
+//
+//                self.getInstanceData = try JSONDecoder().decode(BaseModel.self, from: dataJson)
+//
+//                if let phoneNum = self.getInstanceData?.entity?.userInfo?.userPhone{
+//                    self.phoneNumber.text = "\(phoneNum)"
+//                }
+//                if let userNumber = self.getInstanceData?.entity?.userInfo?.userNo {
+//                    self.resUserNo.text = "\(userNumber)"
+//                }
+//
+//                self.view.layoutIfNeeded()
                 
-                self.getInstanceData = try JSONDecoder().decode(BaseModel.self, from: dataJson)
-                
-                if let phoneNum = self.getInstanceData?.entity?.userInfo?.userPhone{
-                    self.phoneNumber.text = "\(phoneNum)"
-                }
-                if let userNumber = self.getInstanceData?.entity?.userInfo?.userNo {
-                    self.resUserNo.text = "\(userNumber)"
-                }
-                
-                self.view.layoutIfNeeded()
-                
-                
-                //                 network.get(deviceID: deviceID.text ?? "", userNo: userNo.text ?? "", completionHandler: handler!)
-                
-                
-                
-                
-                
-                print("result: \(result)")
+//                print("result: \(result)")
                 //                print("dataJson.debugDescription:\(dataJson.debugDescription)")
                 //                print("dataJson.description:\(dataJson.description)")
                 //                print("getInstanceDat.code:\(self.getInstanceData?.code ?? 0)")
                 //                print("getInstanceDat.entity:\(self.getInstanceData?.entity?.userInfo?.userNo)")
                 
                 
-            } catch  {
-                print(error.localizedDescription)
-            }
-        }
+//            } catch  {
+//                print(error.localizedDescription)
+//            }
+//        }
     }
     
     @IBAction func httpCall(_ sender: Any) {
         
-        network.get(deviceID: deviceID.text ?? "", userNo: userNo.text ?? "", completionHandler: handle)
+//        network.get(deviceID: deviceID.text ?? "", userNo: userNo.text ?? "", completionHandler: handle)
+        let get_news = ApiRouter.getNews(language: Api.news)
+        let get_n = ApiRouter<Api>.getNews
+        let url : URLRequest?
+        do {
+            url = try get_news.asURLRequest()
+            AF.request(url?.url as! URLRequestConvertible).responseJSON{
+                response in
+                
+            }
+                  
+        } catch  {
+            
+        }
+       
+            
+        
         
         
     }
@@ -135,33 +144,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
 }
 
-//        var params = [
-//            "deviceID" : "asd",
-//            "deviceTypeID" : "2",
-//            "registrationKey" : "registrationKey",
-//            "appVersion" : "1.0.0",
-//            "userNo" : "1"
-//        ]
-//        AF.request("http://1.234.83.56:8065/api/common/introProcess",
-//            method: .get,
-//            parameters : params
-//        ).responseJSON {
-//            response in
-//            if let value = response.value as? [String: Any] {
-//                print(value["code"] ?? "")
-
-//                for (key, value) in value {
-//                    print("key: \(key), value: \(value)")
-//                }
-//                if let entity = value["entity"] as? [String: Any] {
-//                    if let userInfo = entity["userInfo"] as? [String: Any] {
-//                    }
-//                }
-//            }
-//            print(response.value)
-//        AF.request("http://1.234.83.56:8065/api/common/introProcess",
-//                   method: .get,
-//                   )
 
 
 

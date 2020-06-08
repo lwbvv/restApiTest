@@ -7,23 +7,15 @@ class NetworkConnection {
     
     
     let BASE_URL = "http://1.234.83.56:8065"
-    var params = [
-                "deviceID" : "asd",
-                "deviceTypeID" : "2",
-                "registrationKey" : "registrationKey",
-                "appVersion" : "1.0.0",
-                "userNo" : "1"
-            ]
     
-    func get(deviceID : String = "asd",
-             userNo : String = "1",
+    func get(params: [String: Any],
              completionHandler: @escaping(Any) -> Void )
     {
        
-        params["deviceID"] = deviceID
-        params["userNo"] = userNo
+//        params["deviceID"] = deviceID
+//        params["userNo"] = userNo
         
-        AF.request("\(BASE_URL)/api/common/introProcess", method: .get,
+        AF.request("\(Url.BASE.rawValue)\(Url.GET_introProcess.rawValue)", method: .get,
                    parameters: params).responseJSON {
                     response in
                     
