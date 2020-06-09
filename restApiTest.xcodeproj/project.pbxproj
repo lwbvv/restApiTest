@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5003FD48248F09C400A836A6 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5003FD47248F09C400A836A6 /* APIClient.swift */; };
+		5003FD4A248F118A00A836A6 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5003FD49248F118A00A836A6 /* News.swift */; };
+		5003FD4C248F127000A836A6 /* ContentsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5003FD4B248F127000A836A6 /* ContentsModel.swift */; };
+		5003FD4E248F12B400A836A6 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5003FD4D248F12B400A836A6 /* Background.swift */; };
+		5003FD51248F179500A836A6 /* NewsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5003FD50248F179500A836A6 /* NewsEndpoint.swift */; };
 		50A01018248DFCE70046A09C /* apiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A01017248DFCE70046A09C /* apiRouter.swift */; };
 		50A0101A248DFD500046A09C /* apiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A01019248DFD500046A09C /* apiConstants.swift */; };
 		50A8CBD2248DBF3B00666196 /* RequestResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A8CBD1248DBF3B00666196 /* RequestResource.swift */; };
@@ -17,7 +22,6 @@
 		50ABE3062488984B004B9879 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50ABE3042488984B004B9879 /* LaunchScreen.storyboard */; };
 		50ABE30F2488ABD6004B9879 /* AlamoFire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ABE30E2488ABD6004B9879 /* AlamoFire.swift */; };
 		50ABE3112488D1CC004B9879 /* EntityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ABE3102488D1CC004B9879 /* EntityModel.swift */; };
-		50ABE3162488E39E004B9879 /* RequestParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ABE3152488E39E004B9879 /* RequestParams.swift */; };
 		50CBA3FE2489CAE7004195FA /* NetworkStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CBA3FD2489CAE7004195FA /* NetworkStatus.swift */; };
 		50CBA4002489D141004195FA /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CBA3FF2489D141004195FA /* BaseModel.swift */; };
 		50CBA415248A171F004195FA /* UserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CBA414248A171F004195FA /* UserInfoModel.swift */; };
@@ -25,6 +29,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5003FD47248F09C400A836A6 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		5003FD49248F118A00A836A6 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		5003FD4B248F127000A836A6 /* ContentsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsModel.swift; sourceTree = "<group>"; };
+		5003FD4D248F12B400A836A6 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
+		5003FD50248F179500A836A6 /* NewsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsEndpoint.swift; sourceTree = "<group>"; };
 		50A01017248DFCE70046A09C /* apiRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = apiRouter.swift; sourceTree = "<group>"; };
 		50A01019248DFD500046A09C /* apiConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = apiConstants.swift; sourceTree = "<group>"; };
 		50A8CBD1248DBF3B00666196 /* RequestResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestResource.swift; sourceTree = "<group>"; };
@@ -37,7 +46,6 @@
 		50ABE3072488984B004B9879 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50ABE30E2488ABD6004B9879 /* AlamoFire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamoFire.swift; sourceTree = "<group>"; };
 		50ABE3102488D1CC004B9879 /* EntityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityModel.swift; sourceTree = "<group>"; };
-		50ABE3152488E39E004B9879 /* RequestParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestParams.swift; sourceTree = "<group>"; };
 		50CBA3FD2489CAE7004195FA /* NetworkStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatus.swift; sourceTree = "<group>"; };
 		50CBA3FF2489D141004195FA /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		50CBA414248A171F004195FA /* UserInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoModel.swift; sourceTree = "<group>"; };
@@ -58,6 +66,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5003FD4F248F173F00A836A6 /* alamoTest */ = {
+			isa = PBXGroup;
+			children = (
+				50ABE30E2488ABD6004B9879 /* AlamoFire.swift */,
+				50CBA3FD2489CAE7004195FA /* NetworkStatus.swift */,
+				50CBA3FF2489D141004195FA /* BaseModel.swift */,
+				50CBA414248A171F004195FA /* UserInfoModel.swift */,
+				50ABE3102488D1CC004B9879 /* EntityModel.swift */,
+			);
+			path = alamoTest;
+			sourceTree = "<group>";
+		};
 		50ABE2ED24889848004B9879 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +99,7 @@
 		50ABE2F824889848004B9879 /* restApiTest */ = {
 			isa = PBXGroup;
 			children = (
+				5003FD4F248F173F00A836A6 /* alamoTest */,
 				50ABE3142488DC4C004B9879 /* dataClass */,
 				50ABE3132488DC17004B9879 /* network */,
 				50ABE2F924889848004B9879 /* AppDelegate.swift */,
@@ -94,15 +115,12 @@
 		50ABE3132488DC17004B9879 /* network */ = {
 			isa = PBXGroup;
 			children = (
-				50ABE3102488D1CC004B9879 /* EntityModel.swift */,
-				50ABE30E2488ABD6004B9879 /* AlamoFire.swift */,
 				50ABE3172488E67E004B9879 /* callBack */,
-				50CBA3FD2489CAE7004195FA /* NetworkStatus.swift */,
-				50CBA3FF2489D141004195FA /* BaseModel.swift */,
-				50CBA414248A171F004195FA /* UserInfoModel.swift */,
 				50A8CBD1248DBF3B00666196 /* RequestResource.swift */,
 				50A01017248DFCE70046A09C /* apiRouter.swift */,
 				50A01019248DFD500046A09C /* apiConstants.swift */,
+				5003FD47248F09C400A836A6 /* APIClient.swift */,
+				5003FD50248F179500A836A6 /* NewsEndpoint.swift */,
 			);
 			name = network;
 			sourceTree = "<group>";
@@ -110,7 +128,9 @@
 		50ABE3142488DC4C004B9879 /* dataClass */ = {
 			isa = PBXGroup;
 			children = (
-				50ABE3152488E39E004B9879 /* RequestParams.swift */,
+				5003FD49248F118A00A836A6 /* News.swift */,
+				5003FD4B248F127000A836A6 /* ContentsModel.swift */,
+				5003FD4D248F12B400A836A6 /* Background.swift */,
 			);
 			path = dataClass;
 			sourceTree = "<group>";
@@ -255,16 +275,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				50A8CBD2248DBF3B00666196 /* RequestResource.swift in Sources */,
+				5003FD4E248F12B400A836A6 /* Background.swift in Sources */,
 				50A0101A248DFD500046A09C /* apiConstants.swift in Sources */,
 				50A01018248DFCE70046A09C /* apiRouter.swift in Sources */,
 				50CBA4002489D141004195FA /* BaseModel.swift in Sources */,
-				50ABE3162488E39E004B9879 /* RequestParams.swift in Sources */,
 				50CBA415248A171F004195FA /* UserInfoModel.swift in Sources */,
+				5003FD51248F179500A836A6 /* NewsEndpoint.swift in Sources */,
 				50ABE30F2488ABD6004B9879 /* AlamoFire.swift in Sources */,
+				5003FD4A248F118A00A836A6 /* News.swift in Sources */,
 				50ABE2FE24889848004B9879 /* ViewController.swift in Sources */,
 				50ABE3112488D1CC004B9879 /* EntityModel.swift in Sources */,
 				50ABE2FA24889848004B9879 /* AppDelegate.swift in Sources */,
 				50CBA3FE2489CAE7004195FA /* NetworkStatus.swift in Sources */,
+				5003FD4C248F127000A836A6 /* ContentsModel.swift in Sources */,
+				5003FD48248F09C400A836A6 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -59,19 +59,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
             self.view.layoutIfNeeded()
             
             
-            //                 network.get(deviceID: deviceID.text ?? "", userNo: userNo.text ?? "", completionHandler: handler!)
-            
-            
-            
-            
-            
-            print("result: \(result)")
-            //                print("dataJson.debugDescription:\(dataJson.debugDescription)")
-            //                print("dataJson.description:\(dataJson.description)")
-            //                print("getInstanceDat.code:\(self.getInstanceData?.code ?? 0)")
-            //                print("getInstanceDat.entity:\(self.getInstanceData?.entity?.userInfo?.userNo)")
-            
-            
         } catch  {
             print(error.localizedDescription)
         }
@@ -83,53 +70,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-//        handler = { result in
-//            do {
-//                let dataJson = try JSONSerialization.data(withJSONObject: result, options: .prettyPrinted)
-//
-//                self.getInstanceData = try JSONDecoder().decode(BaseModel.self, from: dataJson)
-//
-//                if let phoneNum = self.getInstanceData?.entity?.userInfo?.userPhone{
-//                    self.phoneNumber.text = "\(phoneNum)"
-//                }
-//                if let userNumber = self.getInstanceData?.entity?.userInfo?.userNo {
-//                    self.resUserNo.text = "\(userNumber)"
-//                }
-//
-//                self.view.layoutIfNeeded()
-                
-//                print("result: \(result)")
-                //                print("dataJson.debugDescription:\(dataJson.debugDescription)")
-                //                print("dataJson.description:\(dataJson.description)")
-                //                print("getInstanceDat.code:\(self.getInstanceData?.code ?? 0)")
-                //                print("getInstanceDat.entity:\(self.getInstanceData?.entity?.userInfo?.userNo)")
-                
-                
-//            } catch  {
-//                print(error.localizedDescription)
-//            }
-//        }
     }
     
     @IBAction func httpCall(_ sender: Any) {
         
-//        network.get(deviceID: deviceID.text ?? "", userNo: userNo.text ?? "", completionHandler: handle)
-        let get_news = ApiRouter.getNews(language: Api.news)
-        let get_n = ApiRouter<Api>.getNews
-        let url : URLRequest?
-        do {
-            url = try get_news.asURLRequest()
-            AF.request(url?.url as! URLRequestConvertible).responseJSON{
-                response in
-                
-            }
-                  
-        } catch  {
-            
-        }
-       
-            
-        
+        readNews(language: deviceID.text!)
         
         
     }
@@ -141,13 +86,41 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     
     
+    func readNews(language: String){
+        //        APIClient.login(email: "test@gamil.com", password: "myPassword") { result in
+        //            switch result{
+        //            case .success(let user):
+        //                print(user)
+        //            case .failure(let error):
+        //                print("wimes's App Error")
+        //                print(error.localizedDescription)
+        //            }
+        //        }
+        //    }
+//        APIClient.readNews(language: language){
+//            result in
+//            switch result{
+//            case .success(let news):
+//                print("news = \(news)")
+//            case .failure(let error):
+//                print("error log")
+//                print(error.localizedDescription)
+//            }
+//
+//        }
+        
+        
+        
+        
+        
+        
+        APIClient.showNews(language: language){
+            result in
+            
+            print(result)
+            
+            
+        }
+    }
     
 }
-
-
-
-
-
-
-
-
