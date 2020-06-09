@@ -10,11 +10,11 @@ import Foundation
 
 struct ContentsModel : Codable {
     let background : Background
-    let link : String
-    let orderInCateg : String
-    let description : String
-    let id : String
-    let url : String
-    let title : String
+    let link : String?
+    let orderInCateg : String?
+    let description : String?
+    let id : String?
+    let url : String?
+    let title : String?
     
 }

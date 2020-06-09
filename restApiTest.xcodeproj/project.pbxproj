@@ -11,10 +11,9 @@
 		5003FD4A248F118A00A836A6 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5003FD49248F118A00A836A6 /* News.swift */; };
 		5003FD4C248F127000A836A6 /* ContentsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5003FD4B248F127000A836A6 /* ContentsModel.swift */; };
 		5003FD4E248F12B400A836A6 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5003FD4D248F12B400A836A6 /* Background.swift */; };
-		5003FD51248F179500A836A6 /* NewsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5003FD50248F179500A836A6 /* NewsEndpoint.swift */; };
-		50A01018248DFCE70046A09C /* apiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A01017248DFCE70046A09C /* apiRouter.swift */; };
-		50A0101A248DFD500046A09C /* apiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A01019248DFD500046A09C /* apiConstants.swift */; };
-		50A8CBD2248DBF3B00666196 /* RequestResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A8CBD1248DBF3B00666196 /* RequestResource.swift */; };
+		5003FD51248F179500A836A6 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5003FD50248F179500A836A6 /* APIRouter.swift */; };
+		5003FD53248F2BD000A836A6 /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5003FD52248F2BD000A836A6 /* APIConfiguration.swift */; };
+		50A0101A248DFD500046A09C /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A01019248DFD500046A09C /* APIConstants.swift */; };
 		50ABE2FA24889848004B9879 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ABE2F924889848004B9879 /* AppDelegate.swift */; };
 		50ABE2FE24889848004B9879 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ABE2FD24889848004B9879 /* ViewController.swift */; };
 		50ABE30124889848004B9879 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50ABE2FF24889848004B9879 /* Main.storyboard */; };
@@ -33,10 +32,9 @@
 		5003FD49248F118A00A836A6 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		5003FD4B248F127000A836A6 /* ContentsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsModel.swift; sourceTree = "<group>"; };
 		5003FD4D248F12B400A836A6 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
-		5003FD50248F179500A836A6 /* NewsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsEndpoint.swift; sourceTree = "<group>"; };
-		50A01017248DFCE70046A09C /* apiRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = apiRouter.swift; sourceTree = "<group>"; };
-		50A01019248DFD500046A09C /* apiConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = apiConstants.swift; sourceTree = "<group>"; };
-		50A8CBD1248DBF3B00666196 /* RequestResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestResource.swift; sourceTree = "<group>"; };
+		5003FD50248F179500A836A6 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
+		5003FD52248F2BD000A836A6 /* APIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfiguration.swift; sourceTree = "<group>"; };
+		50A01019248DFD500046A09C /* APIConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		50ABE2F624889848004B9879 /* restApiTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = restApiTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50ABE2F924889848004B9879 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50ABE2FD24889848004B9879 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -115,12 +113,10 @@
 		50ABE3132488DC17004B9879 /* network */ = {
 			isa = PBXGroup;
 			children = (
-				50ABE3172488E67E004B9879 /* callBack */,
-				50A8CBD1248DBF3B00666196 /* RequestResource.swift */,
-				50A01017248DFCE70046A09C /* apiRouter.swift */,
-				50A01019248DFD500046A09C /* apiConstants.swift */,
+				50A01019248DFD500046A09C /* APIConstants.swift */,
 				5003FD47248F09C400A836A6 /* APIClient.swift */,
-				5003FD50248F179500A836A6 /* NewsEndpoint.swift */,
+				5003FD50248F179500A836A6 /* APIRouter.swift */,
+				5003FD52248F2BD000A836A6 /* APIConfiguration.swift */,
 			);
 			name = network;
 			sourceTree = "<group>";
@@ -133,13 +129,6 @@
 				5003FD4D248F12B400A836A6 /* Background.swift */,
 			);
 			path = dataClass;
-			sourceTree = "<group>";
-		};
-		50ABE3172488E67E004B9879 /* callBack */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = callBack;
 			sourceTree = "<group>";
 		};
 		B18F6BF24ED645ABCDA96BAF /* Pods */ = {
@@ -274,16 +263,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50A8CBD2248DBF3B00666196 /* RequestResource.swift in Sources */,
 				5003FD4E248F12B400A836A6 /* Background.swift in Sources */,
-				50A0101A248DFD500046A09C /* apiConstants.swift in Sources */,
-				50A01018248DFCE70046A09C /* apiRouter.swift in Sources */,
+				50A0101A248DFD500046A09C /* APIConstants.swift in Sources */,
 				50CBA4002489D141004195FA /* BaseModel.swift in Sources */,
 				50CBA415248A171F004195FA /* UserInfoModel.swift in Sources */,
-				5003FD51248F179500A836A6 /* NewsEndpoint.swift in Sources */,
+				5003FD51248F179500A836A6 /* APIRouter.swift in Sources */,
 				50ABE30F2488ABD6004B9879 /* AlamoFire.swift in Sources */,
 				5003FD4A248F118A00A836A6 /* News.swift in Sources */,
 				50ABE2FE24889848004B9879 /* ViewController.swift in Sources */,
+				5003FD53248F2BD000A836A6 /* APIConfiguration.swift in Sources */,
 				50ABE3112488D1CC004B9879 /* EntityModel.swift in Sources */,
 				50ABE2FA24889848004B9879 /* AppDelegate.swift in Sources */,
 				50CBA3FE2489CAE7004195FA /* NetworkStatus.swift in Sources */,

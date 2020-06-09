@@ -37,33 +37,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    let network = NetworkConnection.init()
-    private var handler: ((Any) -> Void)?
-    var userData : BaseModel?
-    var getInstanceData : BaseModel?
-    
-    
-    func handle(result : Any) {
-        do {
-            let dataJson = try JSONSerialization.data(withJSONObject: result, options: .prettyPrinted)
-            
-            self.getInstanceData = try JSONDecoder().decode(BaseModel.self, from: dataJson)
-            
-            if let phoneNum = self.getInstanceData?.entity?.userInfo?.userPhone{
-                self.phoneNumber.text = "\(phoneNum)"
-            }
-            if let userNumber = self.getInstanceData?.entity?.userInfo?.userNo {
-                self.resUserNo.text = "\(userNumber)"
-            }
-            
-            self.view.layoutIfNeeded()
-            
-            
-        } catch  {
-            print(error.localizedDescription)
-        }
-    }
-    
     
     
     override func viewDidLoad() {
@@ -73,7 +46,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func httpCall(_ sender: Any) {
-        
+
         readNews(language: deviceID.text!)
         
         
@@ -87,40 +60,43 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     
     func readNews(language: String){
-        //        APIClient.login(email: "test@gamil.com", password: "myPassword") { result in
-        //            switch result{
-        //            case .success(let user):
-        //                print(user)
-        //            case .failure(let error):
-        //                print("wimes's App Error")
-        //                print(error.localizedDescription)
-        //            }
-        //        }
-        //    }
-//        APIClient.readNews(language: language){
-//            result in
-//            switch result{
-//            case .success(let news):
-//                print("news = \(news)")
-//            case .failure(let error):
-//                print("error log")
-//                print(error.localizedDescription)
-//            }
-//
-//        }
-        
-        
-        
-        
-        
-        
-        APIClient.showNews(language: language){
+
+        APIClient.readNews(language: language){
             result in
-            
-            print(result)
-            
-            
+            switch result{
+            case .success(let news):
+                for contents in news.news{
+                    print(contents.background.url)
+                    print(contents.background.type)
+                }
+            case .failure(let error):
+                print("error log")
+                print(error.localizedDescription)
+            }
+
         }
     }
     
 }
+
+
+//    func handle(result : Any) {
+//        do {
+//            let dataJson = try JSONSerialization.data(withJSONObject: result, options: .prettyPrinted)
+//
+//            self.getInstanceData = try JSONDecoder().decode(BaseModel.self, from: dataJson)
+//
+//            if let phoneNum = self.getInstanceData?.entity?.userInfo?.userPhone{
+//                self.phoneNumber.text = "\(phoneNum)"
+//            }
+//            if let userNumber = self.getInstanceData?.entity?.userInfo?.userNo {
+//                self.resUserNo.text = "\(userNumber)"
+//            }
+//
+//            self.view.layoutIfNeeded()
+//
+//
+//        } catch  {
+//            print(error.localizedDescription)
+//        }
+//    }
